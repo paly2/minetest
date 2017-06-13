@@ -311,6 +311,7 @@ void set_default_settings(Settings *settings)
 	settings->setDefault("abm_interval", "1.0");
 	settings->setDefault("nodetimer_interval", "0.2");
 	settings->setDefault("ignore_world_load_errors", "false");
+	settings->setDefault("ignore_script_errors", "false");
 	settings->setDefault("remote_media", "");
 	settings->setDefault("debug_log_level", "action");
 	settings->setDefault("emergequeue_limit_total", "256");

@@ -932,6 +932,12 @@ nodetimer_interval (NodeTimer interval) float 0.2
 #    Only enable this if you know what you are doing.
 ignore_world_load_errors (Ignore world errors) bool false
 
+#    If enabled, script errors won't cause the server to shut down (an error message
+#    and a debugging traceback will still be logged).
+#    Disabling it is useful for debugging mods, but it is generally better to enable
+#    it for production.
+ignore_script_errors (Consider script errors as fatal) bool false
+
 #    Max liquids processed per step.
 liquid_loop_max (Liquid loop max) int 100000
 

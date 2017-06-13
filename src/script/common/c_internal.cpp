@@ -121,7 +121,10 @@ void script_error(lua_State *L, int pcall_result, const char *mod, const char *f
 			+ itos(lua_gc(L, LUA_GCCOUNT, 0) >> 10) + " MB";
 	}
 
-	throw LuaError(err_msg);
+	if (g_settings->getBool("ignore_script_errors"))
+		errorstream << "LuaError: " << err_msg << std::endl;
+	else
+		throw LuaError(err_msg);
 }
 
 // Push the list of callbacks (a lua table).

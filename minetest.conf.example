@@ -1138,6 +1138,12 @@
 #    type: bool
 # ignore_world_load_errors = false
 
+#    If enabled, script errors won't cause the server to shut down (an error message
+#    and a debugging traceback will still be logged).
+#    Disabling it is useful for debugging mods, but it is generally better to enable
+#    it for production.
+ignore_script_errors = false
+
 #    Max liquids processed per step.
 #    type: int
 # liquid_loop_max = 100000
